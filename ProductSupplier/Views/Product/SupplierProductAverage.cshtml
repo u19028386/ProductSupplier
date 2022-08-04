@@ -17,7 +17,7 @@
 <h2>Supplier Average Prices</h2>
 
 <div style="height: 250px; overflow: auto;">
-    <table class="table table-condensed table-hover" ">
+    <table class="table table-condensed table-hover">
         <thead style="position: sticky;top: 0">
             <tr bgcolor="#222222" class="auto-style">
                 <th width="33%">Supplier ID</th>
@@ -26,28 +26,14 @@
             </tr>
         </thead>
         <tbody>
-            @*@foreach (var supplier in Model.Suppliers)*@ @*Update*@
-                @*{*@
-                <tr>
-                    @*<td>@supplier.SupplierID</td>*@   @*Edited out to avoid error*@
-                    @*<td>@supplier.Name</td>*@         @*Edited out to avoid error*@
+            @foreach (var supplier in Model.Suppliers)
+                {
+            <tr>
+                <td>@supplier.SupplierID</td>
+                <td>@supplier.Name</td>
+                <td>@Math.Round(Model.ProdSuppliers.Where(x => x.SupplierID == supplier.SupplierID).Average(x => x.Price), 2)</td>
 
-                     @*Complete this section*@
-
-                     @*In this line, complete the match statement (making use of lambda) that would present the price average per supplier (SupplierID)
-                       of all the prices associated with the products prodivded by suppliers.
-
-                       Hint – it is a very simple lambda statement that makes use of predeveloped LINQ / Lambda functionality.
-                         
-                       Focus on the SupplierID obtained from the ProdSupplier.
-                         
-                       Round the value to 2 decimals*@
-
-                      @*Complete this line*@
-
-                      @*Complete this section*@
-                </tr>
-                @*}*@
-        </tbody>
+            </tr>
+                }
     </table>
 </div>

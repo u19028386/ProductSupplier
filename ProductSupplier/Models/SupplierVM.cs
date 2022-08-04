@@ -9,6 +9,8 @@ namespace ProductSupplier.Models
 
     public class SupplierVM  // Complete this model......
         {
+         public List<ProdSupplier> ProdSuppliers { get; set; }
+         public List<Supplier> Suppliers { get; set; }
           
  
         }

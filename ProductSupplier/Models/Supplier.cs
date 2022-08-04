@@ -16,6 +16,10 @@ namespace ProductSupplier.Models
            public int SupplierID { get; set; }
            public string Name { get; set; }
 
-          
-        }
+
+        
+      
+
+
+    }
     }

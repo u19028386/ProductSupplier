@@ -8,6 +8,9 @@ namespace ProductSupplier.Models
 
     public class PriceRangeVM  // Complete this model......
         {
+        public List<Product> Products { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
 
-        }
+    }
     }
